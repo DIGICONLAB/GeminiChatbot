@@ -6,7 +6,7 @@ from PIL import Image
 import os 
 import io 
 
-load_dotenv()
+#load_dotenv()
 
 def image_to_byte_array(image: Image) -> bytes:
     imgByteArr = io.BytesIO()
@@ -14,8 +14,8 @@ def image_to_byte_array(image: Image) -> bytes:
     imgByteArr=imgByteArr.getvalue()
     return imgByteArr
 
-API_KEY = os.environ.get("GOOGLE_API_KEY")
-genai.configure(api_key=API_KEY)
+#API_KEY = os.environ.get("GOOGLE_API_KEY")
+genai.configure(api_key="GOOGLE_API_KEY")
 
 st.image("./Google-Gemini-AI-Logo.png", width=200)
 st.write("")
